@@ -22,19 +22,15 @@
       <form method="POST" action="/signup" class="form">
         <label for="name">
           <input type="text" name="name" id="name" data-rules="required" placeholder="First Name" />
-          <div id="nameAlert" class="alertText">First Name cannot be empty</div>
         </label>
         <label for="lastName">
           <input type="text" name="lastName" id="lastName" data-rules="required" placeholder="Last Name" />
-          <div id="lastNameAlert" class="alertText">Last Name cannot be empty</div>
         </label>
         <label for="email">
           <input type="text" name="email" id="email" data-rules="required|regex" placeholder="Email Address" />
-          <div id="emailAlert" class="alertText">Looks like this is not an email</div>
         </label>
         <label for="password">
           <input type="password" name="password" id="password" data-rules="required" placeholder="Password" />
-          <div id="passwordAlert" class="alertText">Password cannot be empty</div>
         </label>
         <input type="submit" class="submitBtn" value="Claim your free trial" />
         <span>By clicking the button, you are agreeing to our <b onclick="termsClick()">Terms and Services</b></span>
