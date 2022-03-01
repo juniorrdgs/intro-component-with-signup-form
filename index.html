@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Frontend Mentor | Intro component with sign up form</title>
+</head>
+
+<body>
+  <main>
+    <aside>
+      <h1>Learn to code by watching others</h1>
+      <span>See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+        but understanding how developers think is invaluable.
+      </span>
+    </aside>
+    <section>
+      <h2>Try it free 7 days <span>then $20/mo. thereafter</span></h2>
+      <form method="POST" action="/signup" class="form">
+        <label for="name">
+          <input type="text" name="name" id="name" data-rules="required" placeholder="First Name" />
+          <div id="nameAlert" class="alertText">First Name cannot be empty</div>
+        </label>
+        <label for="lastName">
+          <input type="text" name="lastName" id="lastName" data-rules="required" placeholder="Last Name" />
+          <div id="lastNameAlert" class="alertText">Last Name cannot be empty</div>
+        </label>
+        <label for="email">
+          <input type="text" name="email" id="email" data-rules="required|regex" placeholder="Email Address" />
+          <div id="emailAlert" class="alertText">Looks like this is not an email</div>
+        </label>
+        <label for="password">
+          <input type="password" name="password" id="password" data-rules="required" placeholder="Password" />
+          <div id="passwordAlert" class="alertText">Password cannot be empty</div>
+        </label>
+        <input type="submit" class="submitBtn" value="Claim your free trial" />
+        <span>By clicking the button, you are agreeing to our <b onclick="termsClick()">Terms and Services</b></span>
+      </form>
+    </section>
+  </main>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>

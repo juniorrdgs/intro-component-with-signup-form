@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+/* Colors */
+/* Primary */
+--red: hsl(0, 100%, 74%);
+--green: hsl(154, 59%, 51%);
+/* Accent*/
+--blue: hsl(248, 32%, 49%);
+/* Neutral */
+--darkBlue: hsl(249, 10%, 26%);
+--grayishBlue: hsl(246, 25%, 77%);
+--fsize: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body {
+    background-color: var(--red);
+    background-image: url('../images/bg-intro-desktop.png');
+    background-size: cover;
+    background-position: center top;
+    min-height: 100vh;
+}
+
+main {
+    max-width: 1100px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+aside {
+    flex: 1;
+    margin-right: 10px;
+    margin-left: 2px;
+    margin-top: 130px;
+}
+
+aside h1 {
+    color: #FFFFFF;
+    font-size: 49px;
+    font-weight: bold;
+    line-height: 1.15;
+    margin-bottom: 26px;
+}
+
+aside span {
+    font-size: 15px;
+    color: #FFFFFF;
+    margin-left: 1.7px;
+    line-height: 1.7;
+    letter-spacing: 0.55px;
+}
+
+section {
+    width: 540px;
+    margin-top: 120px;
+}
+
+section h2 {
+    width: 100%;
+    background-color: var(--blue);
+    color: #FFFFFF;
+    padding: 17px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    margin-left: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 2px rgba(0, 0, 0, 0.2);
+}
+
+section h2 span {
+    font-weight: normal;
+}
+
+form {
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    padding: 41px 40px;
+    border-radius: 7px;
+    margin-left: 12px;
+    box-shadow: 0 7px 2px rgba(0, 0, 0, 0.2);
+}
+
+form label {
+    height: auto;
+    padding: 0;
+}
+
+form #name,
+form #lastName,
+form #email,
+form #password {
+    width: 100%;
+    height: 58px;
+    margin-top: 18px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 17px 31px;
+    outline: 1px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+form #name::placeholder,
+form #lastName::placeholder,
+form #email::placeholder,
+form #password::placeholder {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+form .submitBtn {
+    background-color: var(--green);
+    border: none;
+    border-radius: 7px;
+    color: #FFFFFF;
+    padding: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 18px;
+    border-bottom: 4px solid #3eb37f;
+}
+
+form #name.alert,
+form #lastName.alert,
+form #email.alert,
+form #password.alert {
+    border: 2px solid var(--red);
+}
+
+form span {
+    text-align: center;
+    font-size: 11px;
+    color: var(--grayishBlue);
+    margin-top: 13px;
+}
+
+form span b {
+    font-size: inherit;
+    color: var(--red);
+    cursor: pointer;
+}
+
+form .alertText {
+    display: none;
+    font-size: 10px;
+    text-align: right
+}
+
+.error {
+    font-size: 10px;
+    color: var(--red);
+    padding: 4px;
+    text-align: right;
+}
+
+@media (max-width:1000px) {
+    main {
+        width: 100%;
+        flex-direction: column;
+    }
+    aside {
+        width: 540px;
+        text-align: center;
+    }
+
+    section {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    aside {
+        width: 320px;
+        margin: 0;
+        margin-top: 95px;
+    }
+
+    aside h1 {
+        font-size: 27px;
+    }
+
+    section {
+        width: 320px;
+        margin-top: 65px;
+    }
+
+    section h2 {
+        margin-left: 0px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    form {
+        width: 320px;
+        padding: 20px;
+        margin-left: 0;
+    }
+}
+
+@media(max-width: 375px) {
+    body {
+        background-image: url('../images/bg-intro-mobile.png');
+    }
+}
+
+@media(max-width: 350px) {
+    aside {
+        width: 300px;
+    }
+
+    section {
+        width: 300px;
+    }
+
+    form {
+        width: 300px;
+    }
+}
